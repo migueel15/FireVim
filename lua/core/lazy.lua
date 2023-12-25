@@ -111,4 +111,9 @@ require('lazy').setup({
   -- Comment
   { 'numToStr/Comment.nvim', opts = {} },
 
+  -- Telescope-file-browser
+  {
+      "nvim-telescope/telescope-file-browser.nvim",
+      dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  },
 }, {})

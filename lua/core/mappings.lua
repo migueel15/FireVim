@@ -16,6 +16,6 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Map <leader>ev to open Neovim configuration in Lua
 vim.keymap.set('n', '<leader>ev', [[:e ~/.config/nvim/init.lua<CR>]], { noremap = true, silent = true })
 
--- Center line when going middle up or middle down
-vim.keymap.set('n', '<C-d>', '<C-d>zz', {noremap = true, silent = true})
-vim.keymap.set('n', '<C-u>', '<C-u>zz', {noremap = true, silent = true})
+-- Center line when going-middle up or middle-down
+vim.keymap.set('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
