@@ -18,6 +18,12 @@ vim.opt.rtp:prepend(lazypath)
 --  You can also configure plugins after the setup call,
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
+  -- Alpha
+  {
+    'goolord/alpha-nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+
   -- LSP
   {
     'neovim/nvim-lspconfig',
@@ -29,6 +35,7 @@ require('lazy').setup({
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
     },
+
   },
 
   -- CMP
@@ -101,7 +108,7 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  -- Harpoon 
+  -- Harpoon
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -113,7 +120,15 @@ require('lazy').setup({
 
   -- Telescope-file-browser
   {
-      "nvim-telescope/telescope-file-browser.nvim",
-      dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    "nvim-telescope/telescope-file-browser.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
   },
+
+  -- Markdown Previewer
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  }
 }, {})
