@@ -11,7 +11,7 @@ opt.completeopt = "menuone,noinsert,noselect"
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
-opt.relativenumber = true           -- Show line number
+opt.relativenumber = true   -- Show line number
 opt.showmatch = true        -- Highlight matching parenthesis
 opt.foldmethod = 'marker'   -- Enable folding (default 'foldmarker')
 opt.colorcolumn = '80'      -- Line lenght marker at 80 columns
@@ -23,6 +23,7 @@ opt.linebreak = true        -- Wrap on word boundary
 opt.laststatus=3            -- Set global statusline
 opt.swapfile = false        -- Disable swapfiles
 opt.termguicolors = true
+opt.showmode = false        -- Disable mode info under lualine
 
 -----------------------------------------------------------
 -- Tabs, indent

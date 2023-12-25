@@ -137,5 +137,9 @@ require('lazy').setup({
     'windwp/nvim-autopairs',
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
-  }
+  },
+
+  -- Toggleterm
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
+
 }, {})

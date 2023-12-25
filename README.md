@@ -32,3 +32,4 @@ git clone https://github.com/migueel15/FireVim.git $XDG_CONFIG_HOME/nvim
 - Configurable icons with [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - Colorscheme: [catppuccin](https://github.com/catppuccin/nvim)
 - Autopairs: [autopairs](https://github.com/windwp/nvim-autopairs)
+- Terminal: [toggleterm](https://github.com/akinsho/toggleterm.nvim)
