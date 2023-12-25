@@ -20,6 +20,7 @@ rm -rf .local/share/nvim/
 # Install firevim config
 git clone https://github.com/migueel15/FireVim.git $XDG_CONFIG_HOME/nvim
 ```
+>Next time you open nvim it will install all necesary plugins
 
 ### Plugins
 - Lsp configuration: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig), [mason.nvim](https://github.com/williamboman/mason.nvim)
@@ -30,3 +31,4 @@ git clone https://github.com/migueel15/FireVim.git $XDG_CONFIG_HOME/nvim
 - Harpooooooon: [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
 - Configurable icons with [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
 - Colorscheme: [catppuccin](https://github.com/catppuccin/nvim)
+- Autopairs: [autopairs](https://github.com/windwp/nvim-autopairs)
