@@ -20,3 +20,13 @@ rm -rf .local/share/nvim/
 # Install firevim config
 git clone https://github.com/migueel15/FireVim.git $XDG_CONFIG_HOME/nvim
 ```
+
+### Plugins
+- Lsp configuration: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig), [mason.nvim](https://github.com/williamboman/mason.nvim)
+- Fuzzy finder: [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- Autocompletion with [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- Status bar with [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- Syntax highlighting with [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- Harpooooooon: [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+- Configurable icons with [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons)
+- Colorscheme: [catppuccin](https://github.com/catppuccin/nvim)
