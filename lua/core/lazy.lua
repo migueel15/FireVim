@@ -67,7 +67,7 @@ require('lazy').setup({
       },
     },
   },
-  
+
   -- Telescope
   {
     'nvim-telescope/telescope.nvim',
@@ -89,6 +89,9 @@ require('lazy').setup({
     },
   },
 
+  -- Plenary
+  { "nvim-lua/plenary.nvim" },
+
   -- Treesitter
   {
     'nvim-treesitter/nvim-treesitter',
@@ -97,5 +100,15 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
+
+  -- Harpoon 
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
+
+  -- Comment
+  { 'numToStr/Comment.nvim', opts = {} },
 
 }, {})

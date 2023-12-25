@@ -1,6 +1,6 @@
+require('core.lazy')
 require('core.options')
 require('core.colors')
 require('core.mappings')
 require('core.autocmds')
-require('core.lazy')
 require('plugins')
