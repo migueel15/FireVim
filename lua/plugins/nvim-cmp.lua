@@ -4,7 +4,6 @@ local lspkind = require("lspkind")
 
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
-
 cmp.setup {
   formatting = {
     format = lspkind.cmp_format({
@@ -48,8 +47,10 @@ cmp.setup {
   },
   sorting = {
     comparators = {
+      cmp.config.compare.scopes,
+      cmp.config.compare.exact,
       function(e1, e2)
-        local priority = { --less is first
+        local priority = { --less appears first
           --[[ Text = ]] 5,
           --[[ Method = ]] 3,
           --[[ Function = ]] 3,
@@ -79,8 +80,20 @@ cmp.setup {
         kind1 = priority[e1:get_kind()] or 99
         kind2 = priority[e2:get_kind()] or 99
         return kind1 < kind2
-      end
+      end,
+      cmp.config.compare.sort_text,
     }
-  }
-
+  },
+  window = {
+    completion = {
+      border = "rounded",
+    },
+    documentation = {
+      max_height = 15,
+      border = "rounded",
+    }
+  },
+  experimental = {
+    ghost_text = true,
+  },
 }
