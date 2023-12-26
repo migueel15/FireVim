@@ -11,7 +11,8 @@ opt.completeopt = "menuone,noinsert,noselect"
 -----------------------------------------------------------
 -- Neovim UI
 -----------------------------------------------------------
-opt.relativenumber = true -- Show line number
+opt.relativenumber = true -- Show line numbers relative to position
+opt.number = true         -- Set current line number, if disable 0
 opt.showmatch = true      -- Highlight matching parenthesis
 opt.foldmethod = 'marker' -- Enable folding (default 'foldmarker')
 opt.colorcolumn = '80'    -- Line lenght marker at 80 columns
