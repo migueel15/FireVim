@@ -9,11 +9,6 @@ cmp.setup {
     format = lspkind.cmp_format({
       mode = 'text_symbol',
       ellipsis_char = '...',
-      menu = {
-        nvim_lsp = "[lsp]",
-        path = "[path]",
-        luasnip = "[snip]",
-      },
     })
   },
   snippet = {
