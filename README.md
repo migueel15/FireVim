@@ -15,7 +15,7 @@
 ```sh 
 # Remove current nvim config
 rm -rf $XDG_CONFIG_HOME/nvim
-rm -rf .local/share/nvim/
+rm -rf $HOME/.local/share/nvim/
 
 # Install firevim config
 git clone https://github.com/migueel15/FireVim.git $XDG_CONFIG_HOME/nvim
