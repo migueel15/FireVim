@@ -1,16 +1,30 @@
 local cmp = require('cmp')
 local luasnip = require 'luasnip'
+local lspkind = require("lspkind")
+
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
 cmp.setup {
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'text_symbol',
+      ellipsis_char = '...',
+      menu = {
+        nvim_lsp = "[lsp]",
+        path = "[path]",
+        luasnip = "[snip]",
+      },
+    })
+  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
     end,
   },
   completion = {
-    completeopt = 'menu,menuone,noinsert',
+    completeopt = 'menu,menuone,noinsert,noselect',
+    keyword_length = 1
   },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
@@ -18,32 +32,55 @@ cmp.setup {
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
+    ['<Tab>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
     ['<CR>'] = cmp.mapping.confirm {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_locally_jumpable() then
-        luasnip.expand_or_jump()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      elseif luasnip.locally_jumpable(-1) then
-        luasnip.jump(-1)
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
   },
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'path' },
   },
+  sorting = {
+    comparators = {
+      function(e1, e2)
+        local priority = { --less is first
+          --[[ Text = ]] 5,
+          --[[ Method = ]] 3,
+          --[[ Function = ]] 3,
+          --[[ Constructor = ]] 4,
+          --[[ Field = ]] 2,
+          --[[ Variable = ]] 1,
+          --[[ Class = ]] 7,
+          --[[ Interface = ]] 8,
+          --[[ Module = ]] 19,
+          --[[ Property = ]] 3,
+          --[[ Unit = ]] 11,
+          --[[ Value = ]] 4,
+          --[[ Enum = ]] 13,
+          --[[ Keyword = ]] 14,
+          --[[ Snippet = ]] 15,
+          --[[ Color = ]] 16,
+          --[[ File = ]] 17,
+          --[[ Reference = ]] 18,
+          --[[ Folder = ]] 19,
+          --[[ EnumMember = ]] 20,
+          --[[ Constant = ]] 21,
+          --[[ Struct = ]] 22,
+          --[[ Event = ]] 23,
+          --[[ Operator = ]] 24,
+          --[[ TypeParameter = ]] 25,
+        }
+        kind1 = priority[e1:get_kind()] or 99
+        kind2 = priority[e2:get_kind()] or 99
+        return kind1 < kind2
+      end
+    }
+  }
+
 }

@@ -67,7 +67,7 @@ local servers = {
   sqlls = {},
   tailwindcss = {},
   yamlls = {},
-
+  eslint = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
