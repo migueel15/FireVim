@@ -135,7 +135,10 @@ require('lazy').setup({
   { 'akinsho/toggleterm.nvim', version = "*", config = true },
 
   -- LspKind
-  { "onsails/lspkind.nvim" }
+  { "onsails/lspkind.nvim" },
+
+  -- NvimTree
+  { "nvim-tree/nvim-tree.lua" }
 
 
 }, {})
