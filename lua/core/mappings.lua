@@ -31,5 +31,5 @@ vim.keymap.set("i", "<M-l>", "<right>", { desc = "Move right in insert mode", no
 -- Move block of text up and down
 vim.keymap.set("n", "<M-j>", "<cmd>m+<cr>", { desc = "Move line down", noremap = true, silent = true })
 vim.keymap.set("n", "<M-k>", "<cmd>m-2<cr>", { desc = "Move line up", noremap = true, silent = true })
-vim.keymap.set("v", "<M-j>", "<cmd>m '>+1<CR>gv", { desc = "Move line down", noremap = true, silent = true })
-vim.keymap.set("v", "<M-k>", "<cmd>m '<-2<cr>", { desc = "Move line up", noremap = true, silent = true })
+vim.keymap.set('x', '<M-j>', ":m '>+1<CR>gv", { noremap = true, silent = true })
+vim.keymap.set('x', '<M-k>', ":m '<-2<CR>gv", { noremap = true, silent = true })
