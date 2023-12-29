@@ -72,8 +72,8 @@ cmp.setup {
           --[[ Operator = ]] 24,
           --[[ TypeParameter = ]] 25,
         }
-        kind1 = priority[e1:get_kind()] or 99
-        kind2 = priority[e2:get_kind()] or 99
+        local kind1 = priority[e1:get_kind()] or 99
+        local kind2 = priority[e2:get_kind()] or 99
         return kind1 < kind2
       end,
       cmp.config.compare.sort_text,
