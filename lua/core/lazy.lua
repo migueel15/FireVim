@@ -130,7 +130,6 @@ require('lazy').setup({
   { "onsails/lspkind.nvim" },
 
   -- NvimTree
-  { "nvim-tree/nvim-tree.lua" }
-
+  { "nvim-tree/nvim-tree.lua" },
 
 }, {})

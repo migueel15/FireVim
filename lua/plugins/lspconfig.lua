@@ -71,7 +71,17 @@ local servers = {
   jsonls = {},
   lua_ls = {
     Lua = {
-      workspace = { checkThirdParty = false },
+
+      workspace = {
+        library = {
+          '/usr/share/nvim/runtime/lua',
+          '/usr/share/nvim/runtime/lua/lsp',
+          '/usr/share/awesome/lib'
+        },
+      },
+      completion = {
+        enable = true
+      },
       telemetry = { enable = false },
       -- NOTE: toggle below to ignore Lua_LS's noisy `missing-fields` warnings
       -- diagnostics = { disable = { 'missing-fields' } },
