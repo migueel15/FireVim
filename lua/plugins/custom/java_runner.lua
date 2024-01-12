@@ -18,7 +18,10 @@ M.BuildAndRunJava = function()
   vim.cmd(":w")
   local build_folder = M.get_project_path() .. "/out/production/" .. M.get_project_name()
   local src_folder = M.get_project_path() .. "/src"
-  os.execute("javac -d " .. build_folder .. " " .. src_folder .. "/**/*.java")
+  -- os.execute("javac -d " .. build_folder .. " " .. src_folder .. "/**/*.java")
+  local build = "javac -d " .. build_folder .. " " .. src_folder .. "/**/*.java"
+
+  -- vim.cmd("TermExec direction=float cmd='" .. "javac -d " .. build_folder .. " " .. src_folder .. "/**/*.java" .. "'")
 
   -- File relative to working directory
   local relative_path = vim.fn.fnamemodify(vim.fn.expand(M.get_current_file_path()), ':~:.:r')
@@ -30,7 +33,7 @@ M.BuildAndRunJava = function()
   local classFile = string.gsub(desiredString, "/", ".")
 
   local command = "java -cp " .. build_folder .. " " .. classFile
-  vim.cmd("TermExec direction=float cmd='" .. "clear; " .. command .. "'")
+  vim.cmd("TermExec direction=float cmd='" .. build .. "; clear; " .. command .. "'")
 end
 
 vim.api.nvim_create_user_command("RunJava", function()
