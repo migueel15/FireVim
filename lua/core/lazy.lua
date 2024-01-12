@@ -137,4 +137,9 @@ require('lazy').setup({
     ft = { 'haskell', 'lhaskell', 'cabal', 'cabalproject' },
   },
 
+  -- java
+  {
+    'mfussenegger/nvim-jdtls'
+  },
+
 }, {})
