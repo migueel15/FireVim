@@ -117,6 +117,9 @@ require('lazy').setup({
     event = "InsertEnter",
     opts = {} -- this is equalent to setup({}) function
   },
+  {
+    'windwp/nvim-ts-autotag'
+  },
 
   -- Toggleterm
   { 'akinsho/toggleterm.nvim', version = "*", config = true },
