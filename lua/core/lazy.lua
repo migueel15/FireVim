@@ -145,4 +145,19 @@ require('lazy').setup({
     'mfussenegger/nvim-jdtls'
   },
 
+  -- zen mode
+  {
+    'folke/zen-mode.nvim',
+    opts = {
+      window = {
+        width = 80
+      }
+    }
+  },
+
+  -- Copilot
+  {
+    'github/copilot.vim'
+  },
+
 }, {})

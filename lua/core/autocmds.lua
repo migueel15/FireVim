@@ -17,3 +17,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 --   group = formatting_group,
 --   pattern = "*"
 -- })
+

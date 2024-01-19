@@ -5,6 +5,7 @@ local opt = vim.opt
 -- General
 -----------------------------------------------------------
 g.mapleader = ','
+g.copilot_no_tab_map = true
 opt.clipboard = "unnamedplus"
 opt.completeopt = "menuone,noinsert,noselect"
 

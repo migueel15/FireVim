@@ -36,3 +36,6 @@ vim.keymap.set('x', '<M-k>', ":m '<-2<CR>gv", { noremap = true, silent = true })
 
 -- Set tmux sessionizer
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
+-- Copilot
+vim.keymap.set("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
