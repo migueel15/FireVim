@@ -33,3 +33,6 @@ vim.keymap.set("n", "<M-j>", "<cmd>m+<cr>", { desc = "Move line down", noremap =
 vim.keymap.set("n", "<M-k>", "<cmd>m-2<cr>", { desc = "Move line up", noremap = true, silent = true })
 vim.keymap.set('x', '<M-j>', ":m '>+1<CR>gv", { noremap = true, silent = true })
 vim.keymap.set('x', '<M-k>', ":m '<-2<CR>gv", { noremap = true, silent = true })
+
+-- Set tmux sessionizer
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

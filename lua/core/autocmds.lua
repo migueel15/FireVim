@@ -9,11 +9,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- format on save
-local formatting_group = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
-vim.api.nvim_create_autocmd("BufWritePre", {
-  callback = function()
-    vim.lsp.buf.format()
-  end,
-  group = formatting_group,
-  pattern = "*"
-})
+-- local formatting_group = vim.api.nvim_create_augroup("LspFormatting", { clear = true })
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   callback = function()
+--     vim.lsp.buf.format()
+--   end,
+--   group = formatting_group,
+--   pattern = "*"
+-- })
