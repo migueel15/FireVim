@@ -159,5 +159,7 @@ require('lazy').setup({
   {
     'github/copilot.vim'
   },
-
+  {
+    'Civitasv/cmake-tools.nvim'
+  },
 }, {})
