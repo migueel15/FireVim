@@ -28,6 +28,10 @@ vim.keymap.set("i", "<M-k>", "<up>", { desc = "Move up in insert mode", noremap 
 vim.keymap.set("i", "<M-h>", "<left>", { desc = "Move left in insert mode", noremap = true, silent = true })
 vim.keymap.set("i", "<M-l>", "<right>", { desc = "Move right in insert mode", noremap = true, silent = true })
 
+-- Tab in visual mode
+vim.keymap.set("v", "<Tab>", ">gv", { desc = "Indent right in visual mode", noremap = true, silent = true })
+vim.keymap.set("v", "<S-Tab>", "<gv", { desc = "Indent left in visual mode", noremap = true, silent = true })
+
 -- Move block of text up and down
 vim.keymap.set("n", "<M-j>", "<cmd>m+<cr>", { desc = "Move line down", noremap = true, silent = true })
 vim.keymap.set("n", "<M-k>", "<cmd>m-2<cr>", { desc = "Move line up", noremap = true, silent = true })
