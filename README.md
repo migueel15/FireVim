@@ -35,3 +35,4 @@ nvim
 - Autopairs: [autopairs](https://github.com/windwp/nvim-autopairs)
 - Terminal: [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 
+test
