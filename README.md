@@ -21,7 +21,7 @@ rm -rf $HOME/.local/share/nvim/
 git clone https://github.com/migueel15/FireVim.git $XDG_CONFIG_HOME/nvim
 nvim
 ```
->Next time you open nvim it will install all necesary plugins
+>Next time you open nvim it will install all the necesary plugins
 
 ### Plugins
 - Lsp configuration: [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig), [mason.nvim](https://github.com/williamboman/mason.nvim)
