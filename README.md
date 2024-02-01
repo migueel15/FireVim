@@ -34,4 +34,3 @@ nvim
 - Colorscheme: [catppuccin](https://github.com/catppuccin/nvim)
 - Autopairs: [autopairs](https://github.com/windwp/nvim-autopairs)
 - Terminal: [toggleterm](https://github.com/akinsho/toggleterm.nvim)
-diff
